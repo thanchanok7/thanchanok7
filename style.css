@@ -1,50 +1,14 @@
-* {
-  /* การกำหนด font ให้กับเว็บไซต์ */
+*{
+  /*การกำหนด font */
   font-family: Arial, Helvetica, sans-serif;
 
-  /* กำหนดรูปแบบ link */
-text-decoration: none;
+  /* กำหนด link style */
+  text-decoration: none;
 
-margin: 0%;
-padding: 0%;
-box-sizing: 0;
-
-}
-
-/* ----------table style----------- */
-/* -----ตั้งค่าการแสดงผลของตาราง----- */
-
-.styled-table{
-  width: 100%;
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-/* ตกแต่งหัวของตาราง */
-.styled-table th{
- background-color: rgb(70, 9, 94);
- color: rgb(251, 255, 23);
- text-align: center;
- padding: 12px 15px;
- font-size: 16px;
-
-}
-
-/* ตกแต่งแถวตาราง */
-.styled-table td {
-  font-size: 14px;
-  text-align: center;
-  padding: 8px 12px;
-  
-}
-
-.styled-table tr:hover{
-  background-color: rgba(207, 214, 210, 0.363);
-}
-/* ตกแต่งเส้นคอบตาราง */
-.styled-table, .styled-table th, .styled-table td{
-  border: 1px solid #121212;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  transition: 0.5s;
 }
 
 /*------------------Menu-------------------*/
@@ -149,3 +113,119 @@ a{
   display: block;
 }
 
+/* -------------table style--------------- */
+/* ตั้งค่าการแสดงผลของตาราง */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse; /* ทำให้เส้นขอบของเซลล์เชื่อมกัน */
+  margin: 25px 0; /* เพิ่มระยะห่างจากด้านบนและล่าง */
+  font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ Arial */
+}
+
+  /* ตกแต่งหัวข้อของตาราง */
+  .styled-table th {
+    background-color: #0068fa; /* สีพื้นหลังของหัวข้อ */
+    color: white; /* สีของตัวอักษรในหัวข้อ */
+    text-align: center; /* จัดตำแหน่งตัวอักษรให้ชิดซ้าย */
+    padding: 12px 15px; /* เพิ่ม padding ด้านในของหัวข้อ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+  }
+
+  /* แถว */
+  .styled-table td {
+    text-align: center; /* จัดตำแหน่งตัวอักษรให้ชิดซ้าย */
+    padding: 8px 12px; /* เพิ่ม padding ด้านในของเซลล์ */
+    /* border-collapse: collapse; */
+    border-bottom: 1px solid #ddd; /* เพิ่มเส้นขอบที่ด้านล่างของแต่ละเซลล์ */
+    font-size: 14px; /* ขนาดตัวอักษร */
+  }
+
+  /* เปลี่ยนสีพื้นหลังของแถวเมื่อชี้เมาส์ */
+  .styled-table tr:hover {
+    background-color: #f2f2f2; /* เปลี่ยนพื้นหลังเป็นสีเทาอ่อน */
+    transform: scale(1.1);
+  }
+
+  /* เพิ่มเส้นขอบรอบตาราง */
+  .styled-table, .styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+  }
+
+  /*---------------profile--------------*/
+  .title {
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+    animation-fill-mode: none;
+  }
+  .top-pic{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    animation-fill-mode: none;
+  }
+  .toph-item{
+    max-width: 1140px;
+    justify-content: center;
+    text-align: center;
+    animation-fill-mode: none;
+  }
+  .toph-info img{
+    width: 300px;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    animation-fill-mode: none;
+    /* animation: 0.5s; */
+    transition: 0.5s;
+  }
+  .toph-info img:hover{
+    transform: scale(1.05);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 14px 14px;
+    column-gap: 14px;
+  }
+
+  .content-item1 {
+    /* border: 1px #f41c1c solid; */
+    display: grid;
+    padding: 18px 12px;
+    background-color: #4186e6;
+    color: #ffffff;
+    animation-fill-mode: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 14px ;
+    overflow: hidden;
+  }
+  .content-item2 {
+    /* border: 1px #f41c1c solid; */
+    padding: 18px 12px;
+    background-color: #4186e6;
+    color: #ffffff;
+    animation-fill-mode: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 14px auto;
+  }
+  .content-item3 {
+    /* border: 1px #f41c1c solid; */
+    padding: 18px 12px;
+    background-color: #4186e6;
+    color: #ffffff;
+    animation-fill-mode: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 14px auto;
+  }
+  .content-item1 h3 {
+    align-items: center;
+    animation-fill-mode: none;
+    text-align: center;
+  }
